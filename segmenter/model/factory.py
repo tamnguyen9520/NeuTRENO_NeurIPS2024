@@ -84,13 +84,13 @@ def create_vit(model_cfg):
         filtered_dict = checkpoint_filter_fn(state_dict, model)
         model.load_state_dict(filtered_dict, strict=True)
     elif backbone == "deit_tiny_patch16_224":
-        deit_backbone = path/to/deit/backbone
-        neutreno_backbone = path/to/neutreno-deit/backbone
+        deit_backbone = "path/to/deit/backbone"
+        neutreno_backbone = "path/to/neutreno-deit/backbone"
   
         if attn_type == 'softmax':
-            checkpoint = torch.load(deit_backbone)
+            checkpoint = torch.load(deit_backbone, map_location="cpu")
         elif attn_type == 'neutreno-former':
-            checkpoint = torch.load(neutreno_backbone)
+            checkpoint = torch.load(neutreno_backbone, map_location="cpu")
         my_load_pretrained(model, default_cfg, filter_fn=checkpoint_filter_fn, checkpoint=checkpoint)
 
 

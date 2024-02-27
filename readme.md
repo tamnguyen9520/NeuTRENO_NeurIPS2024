@@ -8,3 +8,13 @@ deit/README.md
 
 segmenter/README.md
 ```
+Please cite us at
+```
+@article{nguyen2024mitigating,
+  title={Mitigating Over-smoothing in Transformers via Regularized Nonlocal Functionals},
+  author={Nguyen, Tam and Nguyen, Tan and Baraniuk, Richard},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}
+```

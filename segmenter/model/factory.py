@@ -122,7 +122,7 @@ def create_decoder(encoder, decoder_cfg):
             if 'alpha' in decoder_cfg.keys():
                 decoder_cfg.pop('alpha')
             decoder = MaskTransformer(**decoder_cfg)
-        elif attn_type == 'r-former':
+        elif attn_type == 'neutreno-former':
             from segm.model.decoder_neutreno import MaskTransformer
             decoder = MaskTransformer(**decoder_cfg)
 

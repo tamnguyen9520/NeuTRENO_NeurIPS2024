@@ -395,7 +395,7 @@ def main(args):
     max_accuracy = 0.0
 
     print('test_on_test_data')
-    test_stats = evaluate(data_loader_test, model, device)
+    test_stats = evaluate(data_loader_val, model, device)
     print(f"Accuracy of the network on the {len(dataset_val)} test images: {test_stats['acc1']:.1f}%")
     max_accuracy = max(max_accuracy, test_stats["acc1"])
     print(f'Max accuracy: {max_accuracy:.2f}%')
